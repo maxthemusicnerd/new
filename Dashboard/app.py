@@ -4,9 +4,12 @@ import bcrypt
 from azure.storage.blob import BlobServiceClient
 import io
 
+
+azure_key = ""
+
 def load_users():
     blob_service_client = BlobServiceClient.from_connection_string(
-        "DefaultEndpointsProtocol=https;AccountName=hashaccount;AccountKey=ZHW+Pgh3i7A8kgulaMviIjJpOiuYm7O2em9SfZTekfBfwED6WboU+MFsSo+ER6SX4hDMaH2tQizP+AStNI5k3g==;EndpointSuffix=core.windows.net"
+        azure_key
     )
     #Yes i know i misspelled accounts but i dont want to change it in azure 
     blob_client = blob_service_client.get_blob_client(
@@ -20,7 +23,7 @@ def load_users():
 
 def save_users(df):
     blob_service_client = BlobServiceClient.from_connection_string(
-        "DefaultEndpointsProtocol=https;AccountName=hashaccount;AccountKey=ZHW+Pgh3i7A8kgulaMviIjJpOiuYm7O2em9SfZTekfBfwED6WboU+MFsSo+ER6SX4hDMaH2tQizP+AStNI5k3g==;EndpointSuffix=core.windows.net"
+        azure_key
     )
 
     blob_client = blob_service_client.get_blob_client(
