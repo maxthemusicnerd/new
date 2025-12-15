@@ -7,4 +7,5 @@ azure-functions
 flask
 pandas
 bcrypt
-
+Flask-Dance[google]
+Flask-Login
