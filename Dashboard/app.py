@@ -5,7 +5,7 @@ from azure.storage.blob import BlobServiceClient
 import io
 
 
-azure_key = ""
+azure_key = "DefaultEndpointsProtocol=https;AccountName=hashaccount;AccountKey=ZHW+Pgh3i7A8kgulaMviIjJpOiuYm7O2em9SfZTekfBfwED6WboU+MFsSo+ER6SX4hDMaH2tQizP+AStNI5k3g==;EndpointSuffix=core.windows.net"
 
 def load_users():
     blob_service_client = BlobServiceClient.from_connection_string(
