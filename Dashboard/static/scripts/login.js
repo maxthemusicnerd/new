@@ -1,4 +1,3 @@
-const { use } = require("react");
 
 const form = document.getElementById('login-form');
 
@@ -18,12 +17,18 @@ form.addEventListener('submit', (e) => {
     check_database(username, password)
 });
 
-function check_database(username, password) {
-    console.log(`Username: ${username}, Password: ${password}`);
+async function check_database(username, password) {
+    const res = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    });
 
-    //fill in with logic to check if username and password is in DB
+    const data = await res.json();
 
-    //if match send them to the dashboard with their username in the corner
-
-    //if not, say not in system
+    if (data.success) {
+        window.location.href = data.redirect;
+    } else {
+        alert("Invalid username or password");
+    }
 }

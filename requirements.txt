@@ -2,6 +2,9 @@
 # Ref: aka.ms/functions-azure-monitor-python
 # azure-monitor-opentelemetry
 
+azure-storage-blob
 azure-functions
 flask
+pandas
+bcrypt
 

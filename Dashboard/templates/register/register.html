@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,16 +62,16 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form id="login-form">
+        <h1>Register</h1>
+        <form id="register-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
-            <button type="submit">Submit</button>
-            <a href="">Register for an account</a>
+            <button type="submit">Create Account</button>
+            <a href="{{url_for('login')}}">Have an account already?</a>
         </form>
     </div>
-    <script src="login.js"></script>
+    <script src="{{url_for('static', filename='scripts/register.js')}}"></script>
 </body>
 </html>
