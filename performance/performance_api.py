@@ -5,7 +5,7 @@ import io
 from azure.storage.blob import BlobServiceClient
 
 app = Flask(__name__)
-AZURE_CONN = "<YOUR CONNECTION STRING>"
+AZURE_CONN = "DefaultEndpointsProtocol=https;AccountName=hashaccount;AccountKey=ZHW+Pgh3i7A8kgulaMviIjJpOiuYm7O2em9SfZTekfBfwED6WboU+MFsSo+ER6SX4hDMaH2tQizP+AStNI5k3g==;EndpointSuffix=core.windows.net"
 
 def load_cleaned_data():
     blob = BlobServiceClient.from_connection_string(AZURE_CONN)\

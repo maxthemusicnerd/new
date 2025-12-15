@@ -3,7 +3,7 @@ import json
 import io
 from azure.storage.blob import BlobServiceClient
 
-AZURE_CONN = "<YOUR CONNECTION STRING>"
+AZURE_CONN = "DefaultEndpointsProtocol=https;AccountName=hashaccount;AccountKey=ZHW+Pgh3i7A8kgulaMviIjJpOiuYm7O2em9SfZTekfBfwED6WboU+MFsSo+ER6SX4hDMaH2tQizP+AStNI5k3g==;EndpointSuffix=core.windows.net"
 
 def main(blob: bytes):
     # Load raw CSV
